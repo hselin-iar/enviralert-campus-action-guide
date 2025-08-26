@@ -52,6 +52,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				'leak-blue': {
+					DEFAULT: 'hsl(var(--leak-blue))',
+					foreground: 'hsl(var(--leak-blue-foreground))'
+				},
+				'volunteer-green': {
+					DEFAULT: 'hsl(var(--volunteer-green))',
+					foreground: 'hsl(var(--volunteer-green-foreground))'
+				},
+				'donation-orange': {
+					DEFAULT: 'hsl(var(--donation-orange))',
+					foreground: 'hsl(var(--donation-orange-foreground))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
