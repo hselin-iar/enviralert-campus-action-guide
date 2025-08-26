@@ -39,9 +39,9 @@ export const EnviralertApp = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gray-100 p-8">
       {/* Navigation for demo purposes */}
-      <div className="fixed top-4 right-4 z-50 flex flex-wrap gap-2 p-3 bg-card rounded-lg shadow-lg border max-w-md">
+      <div className="fixed top-4 right-4 z-50 flex flex-wrap gap-2 p-3 bg-white rounded-lg shadow-lg border max-w-md">
         <Button 
           size="sm" 
           variant={currentScreen === 'map' ? 'default' : 'outline'} 
@@ -93,7 +93,50 @@ export const EnviralertApp = () => {
         </Button>
       </div>
       
-      {renderScreen()}
+      {/* Mobile Frame Container */}
+      {currentScreen === 'admin' ? (
+        // Admin dashboard full width
+        <div className="w-full">
+          {renderScreen()}
+        </div>
+      ) : (
+        // Mobile screens in phone frame
+        <div className="flex justify-center items-start pt-8">
+          <div className="relative">
+            {/* Phone Frame */}
+            <div className="w-[375px] h-[812px] bg-black rounded-[3rem] p-2 shadow-2xl">
+              <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
+                {/* Status bar */}
+                <div className="absolute top-0 left-0 right-0 h-11 bg-black/5 flex items-center justify-between px-6 text-sm font-medium z-50">
+                  <span>9:41</span>
+                  <div className="flex items-center gap-1">
+                    <div className="w-4 h-2 border border-black/30 rounded-sm">
+                      <div className="w-3 h-1 bg-black/80 rounded-sm m-px"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Screen Content */}
+                <div className="w-full h-full pt-11 overflow-hidden">
+                  {renderScreen()}
+                </div>
+              </div>
+            </div>
+            
+            {/* Screen Label */}
+            <div className="text-center mt-4">
+              <span className="inline-block px-3 py-1 bg-white rounded-full shadow text-sm font-medium">
+                {currentScreen === 'map' && '01_Map_Hero.png'}
+                {currentScreen === 'report' && '02_Report.png'}
+                {currentScreen === 'closure' && '03_Report_Closure.png'}
+                {currentScreen === 'volunteer' && '04_Volunteer.png'}
+                {currentScreen === 'marketplace' && '05_Marketplace.png'}
+                {currentScreen === 'rewards' && '06_Rewards.png'}
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

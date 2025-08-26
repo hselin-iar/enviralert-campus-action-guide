@@ -11,7 +11,7 @@ interface ReportClosureProps {
 
 export const ReportClosure = ({ onNavigate }: ReportClosureProps) => {
   return (
-    <div className="min-h-screen bg-background p-4 max-w-md mx-auto">
+    <div className="min-h-screen bg-background p-4">
       {/* Header */}
       <div className="flex items-center gap-3 mb-6">
         <Button size="sm" variant="ghost" onClick={() => onNavigate('map')}>
