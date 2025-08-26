@@ -64,6 +64,10 @@ export default {
 					DEFAULT: 'hsl(var(--donation-orange))',
 					foreground: 'hsl(var(--donation-orange-foreground))'
 				},
+				'glass': {
+					bg: 'rgb(var(--glass-bg))',
+					border: 'rgb(var(--glass-border))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -74,6 +78,16 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			backdropFilter: {
+				'none': 'none',
+				'blur': 'var(--glass-blur)',
+			},
+			backgroundImage: {
+				'glass-gradient': 'var(--glass-gradient)',
+			},
+			boxShadow: {
+				'glass': 'var(--glass-shadow)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

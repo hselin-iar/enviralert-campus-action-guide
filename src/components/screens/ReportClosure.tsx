@@ -11,13 +11,13 @@ interface ReportClosureProps {
 
 export const ReportClosure = ({ onNavigate }: ReportClosureProps) => {
   return (
-    <div className="min-h-screen bg-background p-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 p-4">
       {/* Header */}
-      <div className="flex items-center gap-3 mb-6">
-        <Button size="sm" variant="ghost" onClick={() => onNavigate('map')}>
+      <div className="flex items-center gap-3 mb-6 pt-2">
+        <Button size="sm" variant="ghost" onClick={() => onNavigate('map')} className="bg-glass-bg backdrop-blur-md border border-glass-border text-white">
           <ArrowLeft className="w-4 h-4" />
         </Button>
-        <h1 className="text-xl font-bold">Report Details</h1>
+        <h1 className="text-xl font-bold text-white">Report Details</h1>
       </div>
 
       {/* Before/After Images */}
